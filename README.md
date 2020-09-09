@@ -20,8 +20,8 @@
 
 ## 下载地址
 
-* [蓝奏云：lanzoux.com/b073m0dne](https://www.lanzoux.com/b073m0dne)
-* [Github：XIU2/UACWhitelistTool/releases](https://github.com/XIU2/UACWhitelistTool/releases)
+* 蓝奏云 ：[https://www.lanzoux.com/b073m0dne](https://www.lanzoux.com/b073m0dne)
+* Github：[https://github.com/XIU2/UACWhitelistTool/releases](https://github.com/XIU2/UACWhitelistTool/releases)
 
 ****
 
