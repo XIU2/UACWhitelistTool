@@ -13,15 +13,15 @@
 
 ## 软件界面
 
-![软件界面](https://raw.githubusercontent.com/XIU2/UACWhitelistTool/master/img/01.png)  
-![右键菜单](https://raw.githubusercontent.com/XIU2/UACWhitelistTool/master/img/02.png)
+![软件界面](https://raw.githubusercontent.com/XIU2/UACWhitelistTool/master/img/02.png)  
+![右键菜单](https://raw.githubusercontent.com/XIU2/UACWhitelistTool/master/img/01.png)
 
 ****
 
 ## 下载地址
 
-* [蓝奏云](https://www.lanzoux.com/b073m0dne)
-* [Github](https://github.com/XIU2/UACWhitelistTool/releases)
+* [蓝奏云：lanzoux.com/b073m0dne](https://www.lanzoux.com/b073m0dne)
+* [Github：XIU2/UACWhitelistTool/releases](https://github.com/XIU2/UACWhitelistTool/releases)
 
 ****
 
