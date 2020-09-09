@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAC白名单小工具", "UAC白名单小工具.csproj", "{CACE89B6-1927-4695-B915-FA14D349C66C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CACE89B6-1927-4695-B915-FA14D349C66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CACE89B6-1927-4695-B915-FA14D349C66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CACE89B6-1927-4695-B915-FA14D349C66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CACE89B6-1927-4695-B915-FA14D349C66C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6613425-AF5B-453C-A633-C569B13A3A6C}
+	EndGlobalSection
+EndGlobal
