@@ -5,12 +5,10 @@ using System.IO;
 using System.Text;
 using IWshRuntimeLibrary;
 using UAC白名单小工具.Properties;
-using System.Net;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
 using System.Drawing;
-using FileDropAdmin_cs;
 
 namespace UAC白名单小工具
 {
@@ -18,7 +16,7 @@ namespace UAC白名单小工具
     {
         readonly string[] args;
 
-        public FileDropAdmin FileDroper;
+        public FileDropAdmin_cs.FileDropAdmin FileDroper;
         public Form(string[] args)
         {
             InitializeComponent();
@@ -33,7 +31,7 @@ namespace UAC白名单小工具
                 //Debug.Print(args[0]);
                 Handling_File_Drop(args[0]);
             }
-            FileDroper = new FileDropAdmin(this);
+            FileDroper = new FileDropAdmin_cs.FileDropAdmin(this);
             FileVersionInfo VerInfo = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
             J_VerInfo = VerInfo.FileVersion;
             J_VerInfo = J_VerInfo.Replace(".0.0","");
@@ -44,21 +42,17 @@ namespace UAC白名单小工具
         // 有文件拖放进来了
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
-            string[] Drag_File = (string[])e.Data.GetData(typeof(string[]));
-            if (Drag_File.Length > 0)
-            {
-                e.Effect = DragDropEffects.All;
-            }
+            e.Effect = DragDropEffects.Link;
         }
         // 处理拖放进来的文件
         private void Form1_DragDrop(object sender, DragEventArgs e)
         {
-            string[] Drag_File = (string[])e.Data.GetData(typeof(string[]));
-            Handling_File_Drop(Drag_File[0]);
+            Handling_File_Drop(((string[])e.Data.GetData(typeof(string[])))[0]);
         }
         // 处理拖放进来的文件
         private void Handling_File_Drop(string Drag_File_PATH)
         {
+            Debug.Print(Drag_File_PATH);
             if (Path.GetExtension(Drag_File_PATH).ToLower() == ".exe" || Path.GetExtension(Drag_File_PATH).ToLower()  == ".bat")
             {
                 if (System.IO.File.Exists(Drag_File_PATH))
@@ -286,7 +280,8 @@ namespace UAC白名单小工具
         // 检查更新
         private void Check_Updates(bool Tipprompt)
         {
-            string strHTML = Get_HTTP("https://api.xiuer.pw/ver/uacbmdxgj.txt");
+            string strHTML = WebClient_cs.GetHTTP.Get_HTTP("https://api.xiuer.pw/ver/uacbmdxgj.txt");
+            Debug.Print(strHTML);
             string[] Ver_Info = strHTML.Split('\n');
             if (Ver_Info.Length > 2)
             {
@@ -323,15 +318,6 @@ namespace UAC白名单小工具
                     MessageBox.Show("当前已是最新版本 " + J_VerInfo + " ！", "信息：", MessageBoxButtons.OK);
                 }
             }
-        }
-        private string Get_HTTP(string url)
-        {
-            NewWebClient myWebClient = new NewWebClient(10000);
-            Stream myStream = myWebClient.OpenRead(url);
-            StreamReader sr = new StreamReader(myStream, System.Text.Encoding.GetEncoding("utf-8"));
-            string strHTML = sr.ReadToEnd();
-            myStream.Close();
-            return strHTML;
         }
 
         private void CheckBox_添加到右键菜单_CheckedChanged(object sender, EventArgs e)
@@ -470,43 +456,6 @@ namespace UAC白名单小工具
             {
                 Button_添加.BackColor = SystemColors.ButtonShadow;
             }
-        }
-    }
-    // 带超时时间的 WebClient
-    public class NewWebClient : WebClient
-    {
-        private int _timeout;
-
-        /// <summary>
-        /// 超时时间(毫秒)
-        /// </summary>
-        public int Timeout
-        {
-            get
-            {
-                return _timeout;
-            }
-            set
-            {
-                _timeout = value;
-            }
-        }
-
-        public NewWebClient()
-        {
-            this._timeout = 60000;
-        }
-
-        public NewWebClient(int timeout)
-        {
-            this._timeout = timeout;
-        }
-
-        protected override WebRequest GetWebRequest(Uri address)
-        {
-            var result = base.GetWebRequest(address);
-            result.Timeout = this._timeout;
-            return result;
         }
     }
 }
