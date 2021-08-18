@@ -1,9 +1,9 @@
 # XIU2/UACWhitelistTool
 
-[![Release Version](https://img.shields.io/github/v/release/XIU2/UACWhitelistTool.svg?style=flat-square&label=Release&color=1784ff)](https://github.com/XIU2/UACWhitelistTool/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/XIU2/UACWhitelistTool.svg?style=flat-square&label=License&color=36ab60)](https://github.com/XIU2/UACWhitelistTool/blob/master/LICENSE)
-[![GitHub Star](https://img.shields.io/github/stars/XIU2/UACWhitelistTool.svg?style=flat-square&label=Star&color=36ab60)](https://github.com/XIU2/UACWhitelistTool/stargazers)
-[![GitHub Fork](https://img.shields.io/github/forks/XIU2/UACWhitelistTool.svg?style=flat-square&label=Fork&color=36ab60)](https://github.com/XIU2/UACWhitelistTool/network/members)
+[![Release Version](https://img.shields.io/github/v/release/XIU2/UACWhitelistTool.svg?style=flat-square&label=Release&color=1784ff&logo=github)](https://github.com/XIU2/UACWhitelistTool/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/XIU2/UACWhitelistTool.svg?style=flat-square&label=License&color=36ab60&logo=github)](https://github.com/XIU2/UACWhitelistTool/)
+[![GitHub Star](https://img.shields.io/github/stars/XIU2/UACWhitelistTool.svg?style=flat-square&label=Star&color=36ab60&logo=github)](https://github.com/XIU2/UACWhitelistTool/)
+[![GitHub Fork](https://img.shields.io/github/forks/XIU2/UACWhitelistTool.svg?style=flat-square&label=Fork&color=36ab60)](https://github.com/XIU2/UACWhitelistTool/)
 
 **一个可以添加 UAC 白名单的小工具！**  
 
