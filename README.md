@@ -20,7 +20,7 @@
 
 ## 下载地址
 
-* 蓝奏云 ：[https://pan.lanzoui.com/b073m0dne](https://pan.lanzoui.com/b073m0dne)
+* 蓝奏云 ：[https://pan.lanzouo.com/b073m0dne](https://pan.lanzouo.com/b073m0dne)
 * Github：[https://github.com/XIU2/UACWhitelistTool/releases](https://github.com/XIU2/UACWhitelistTool/releases)
 
 ****
