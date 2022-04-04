@@ -62,7 +62,7 @@
 
 ## 赞赏支持
 
-![微信赞赏](https://cdn.dogimg.com/pic/2022/03/28/6241159b1f315.png)![支付宝赞赏](https://cdn.dogimg.com/pic/2022/03/28/6241159b19b2c.png)
+![微信赞赏](https://fastly.jsdelivr.net/gh/XIU2/TrackersListCollection/img/zs-01.png)![支付宝赞赏](https://fastly.jsdelivr.net/gh/XIU2/TrackersListCollection/img/zs-02.png)
 
 ****
 
@@ -94,12 +94,6 @@
 
 ****
 
-## 许可证
+## License
 
 The GPL-3.0 License.
-
-本软件仅供学习交流，请勿用于商用。  
-
-软件所有权归 X.I.U(XIU2) 所有。  
-
-> 该项目只在 [吾爱破解论坛](https://www.52pojie.cn/thread-1134450-1-1.html)、[知乎文章](https://zhuanlan.zhihu.com/p/114096199) 发布过，其他网站均为转载。当然，**欢迎转载！** 
