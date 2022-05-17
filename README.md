@@ -20,7 +20,7 @@
 
 ## 下载地址
 
-* 蓝奏云 ：[https://pan.lanzouo.com/b073m0dne](https://pan.lanzouo.com/b073m0dne)
+* 蓝奏云 ：[https://pan.lanzouq.com/b073m0dne](https://pan.lanzouq.com/b073m0dne)
 * Github：[https://github.com/XIU2/UACWhitelistTool/releases](https://github.com/XIU2/UACWhitelistTool/releases)
 
 ****
@@ -62,7 +62,7 @@
 
 ## 赞赏支持
 
-![微信赞赏](https://fastly.jsdelivr.net/gh/XIU2/TrackersListCollection/img/zs-01.png)![支付宝赞赏](https://fastly.jsdelivr.net/gh/XIU2/TrackersListCollection/img/zs-02.png)
+![微信赞赏](https://cdn.staticaly.com/gh/XIU2/XIU2/master/img/zs-01.png)![支付宝赞赏](https://cdn.staticaly.com/gh/XIU2/XIU2/master/img/zs-02.png)
 
 ****
 
