@@ -13,14 +13,14 @@
 
 ## 软件界面
 
-![软件界面](https://raw.githubusercontent.com/XIU2/UACWhitelistTool/master/img/02.png)  
-![右键菜单](https://raw.githubusercontent.com/XIU2/UACWhitelistTool/master/img/01.png)
+![软件界面](https://cdn.staticaly.com/gh/XIU2/UACWhitelistTool/master/img/02.png)  
+![右键菜单](https://cdn.staticaly.com/gh/XIU2/UACWhitelistTool/master/img/01.png)
 
 ****
 
 ## 下载地址
 
-* 蓝奏云 ：[https://pan.lanzouq.com/b073m0dne](https://pan.lanzouq.com/b073m0dne)
+* 蓝奏云 ：[https://pan.lanzouf.com/b073m0dne](https://pan.lanzouf.com/b073m0dne)
 * Github：[https://github.com/XIU2/UACWhitelistTool/releases](https://github.com/XIU2/UACWhitelistTool/releases)
 
 ****
@@ -67,6 +67,10 @@
 ****
 
 ## 更新日志
+
+### 2023年03月13日，版本 v1.8.1
+
+1. **移除** 检查更新。  
 
 ### 2020年08月07日，版本 v1.8
 

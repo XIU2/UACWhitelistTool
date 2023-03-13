@@ -34,9 +34,9 @@ namespace UAC白名单小工具
             FileDroper = new FileDropAdmin_cs.FileDropAdmin(this);
             FileVersionInfo VerInfo = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
             J_VerInfo = VerInfo.FileVersion;
-            J_VerInfo = J_VerInfo.Replace(".0.0","");
+            J_VerInfo = J_VerInfo.Replace(".0","");
             this.Text = "UAC白名单小工具 v" + J_VerInfo;
-            Task.Run(() => Check_Updates(false));
+            //Task.Run(() => Check_Updates(false));
             NotKey();
         }
         // 有文件拖放进来了
@@ -280,7 +280,7 @@ namespace UAC白名单小工具
         // 检查更新
         private void Check_Updates(bool Tipprompt)
         {
-            string strHTML = WebClient_cs.GetHTTP.Get_HTTP("https://api.xiuer.pw/ver/uacbmdxgj.txt");
+            string strHTML = WebClient_cs.GetHTTP.Get_HTTP("https://api.xiu2.xyz/ver/uacbmdxgj.txt");
             Debug.Print(strHTML);
             string[] Ver_Info = strHTML.Split('\n');
             if (Ver_Info.Length > 2)
