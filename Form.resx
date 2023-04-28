@@ -124,7 +124,7 @@
     <value>165, 17</value>
   </metadata>
   <data name="label3.ToolTip" xml:space="preserve">
-    <value>1. [拖拽] 或 [浏览] 选择一个应用程序 (.exe) 或快捷方式 (.lnk) 。
+    <value>1. [拖拽] 或 [浏览] 选择一个应用程序 (.exe) 或脚本 (.bat) 或快捷方式 (.lnk) 。
 2. [程序名称]随意，但必须唯一 不可重复。
 3. [启动参数] 与 [起始位置] 均可选。
 4. [添加到 UAC 白名单] 后，你的 [桌面] 就会出现一个快捷方式。

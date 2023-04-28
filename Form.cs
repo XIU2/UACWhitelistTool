@@ -36,13 +36,12 @@ namespace UAC白名单小工具
             J_VerInfo = VerInfo.FileVersion;
             J_VerInfo = J_VerInfo.Replace(".0","");
             this.Text = "UAC白名单小工具 v" + J_VerInfo;
-            //Task.Run(() => Check_Updates(false));
             NotKey();
         }
         // 有文件拖放进来了
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Link;
+            e.Effect = DragDropEffects.All;
         }
         // 处理拖放进来的文件
         private void Form1_DragDrop(object sender, DragEventArgs e)
@@ -114,7 +113,7 @@ namespace UAC白名单小工具
             }
             else
             {
-                MessageBox.Show("只支持拖入 .exe .lnk 格式的文件！", "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("只支持拖入 .exe .bat .lnk 格式的文件！", "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         // 监视输入框
@@ -154,7 +153,7 @@ namespace UAC白名单小工具
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if (Path.GetExtension(openFileDialog1.FileName) == ".exe")
+                if (Path.GetExtension(openFileDialog1.FileName).ToLower() == ".exe" || Path.GetExtension(openFileDialog1.FileName).ToLower()  == ".bat")
                 {
                     if (System.IO.File.Exists(openFileDialog1.FileName))
                     {
@@ -172,7 +171,7 @@ namespace UAC白名单小工具
                         MessageBox.Show("文件不存在！请检查！" + Environment.NewLine + openFileDialog1.FileName, "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else if (Path.GetExtension(openFileDialog1.FileName) == ".lnk")
+                else if (Path.GetExtension(openFileDialog1.FileName).ToLower() == ".lnk")
                 {
                     if (System.IO.File.Exists(openFileDialog1.FileName))
                     {
@@ -215,7 +214,7 @@ namespace UAC白名单小工具
                 }
                 else
                 {
-                    MessageBox.Show("只支持拖入 .exe .lnk 格式的文件！", "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("只支持拖入 .exe .bat .lnk 格式的文件！", "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -276,48 +275,6 @@ namespace UAC白名单小工具
         private void Button_打开_Click(object sender, EventArgs e)
         {
             Process.Start("taskschd.msc", "/s");
-        }
-        // 检查更新
-        private void Check_Updates(bool Tipprompt)
-        {
-            string strHTML = WebClient_cs.GetHTTP.Get_HTTP("https://api.xiu2.xyz/ver/uacbmdxgj.txt");
-            Debug.Print(strHTML);
-            string[] Ver_Info = strHTML.Split('\n');
-            if (Ver_Info.Length > 2)
-            {
-                if (Ver_Info[1] != "")
-                {
-                    if (Ver_Info[1] != J_VerInfo)
-                    {
-                        if (MessageBox.Show("发现新版本 [v" + Ver_Info[1] + "]！是否前往更新？", "发现新版本！", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                        {
-                            Process.Start(Ver_Info[2]);
-                        }
-                    }
-                    else
-                    {
-                        if (Tipprompt == true)
-                        {
-                            MessageBox.Show("当前已是最新版本 " + J_VerInfo + " ！", "信息：", MessageBoxButtons.OK);
-                        }
-                        
-                    }
-                }
-                else
-                {
-                    if (Tipprompt == true)
-                    {
-                        MessageBox.Show("当前已是最新版本 " + J_VerInfo + " ！", "信息：", MessageBoxButtons.OK);
-                    }
-                }
-            }
-            else
-            {
-                if (Tipprompt == true)
-                {
-                    MessageBox.Show("当前已是最新版本 " + J_VerInfo + " ！", "信息：", MessageBoxButtons.OK);
-                }
-            }
         }
 
         private void CheckBox_添加到右键菜单_CheckedChanged(object sender, EventArgs e)

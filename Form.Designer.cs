@@ -150,11 +150,11 @@
             // 
             this.openFileDialog1.AddExtension = false;
             this.openFileDialog1.DereferenceLinks = false;
-            this.openFileDialog1.Filter = "应用程序(*.exe;*.lnk)|*.exe;*.lnk";
+            this.openFileDialog1.Filter = "应用程序(*.exe;*.bat;*.lnk)|*.exe;*.bat;*.lnk";
             this.openFileDialog1.ReadOnlyChecked = true;
             this.openFileDialog1.ShowReadOnly = true;
             this.openFileDialog1.SupportMultiDottedExtensions = true;
-            this.openFileDialog1.Title = "选择应用程序或快捷方式";
+            this.openFileDialog1.Title = "选择应用程序、脚本、快捷方式";
             this.openFileDialog1.ValidateNames = false;
             // 
             // Button_打开
@@ -325,4 +325,3 @@
         private System.Windows.Forms.Label Label_起始位置;
     }
 }
-
