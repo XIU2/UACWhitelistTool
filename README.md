@@ -13,8 +13,8 @@
 
 ## 软件界面
 
-![软件界面](https://cdn.staticaly.com/gh/XIU2/UACWhitelistTool/master/img/02.png)  
-![右键菜单](https://cdn.staticaly.com/gh/XIU2/UACWhitelistTool/master/img/01.png)
+![软件界面](https://github.com/XIU2/UACWhitelistTool/blob/master/img/02.png)  
+![右键菜单](https://github.com/XIU2/UACWhitelistTool/blob/master/img/01.png)
 
 ****
 
