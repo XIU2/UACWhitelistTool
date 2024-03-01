@@ -1,0 +1,36 @@
+name: Build and Publish
+
+on:
+  push:
+    branches: [ GinDes-patch-1 ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '4.5'  # 设置运行环境的 .NET 版本，根据你的实际需求来设定。
+
+    - name: Restore dependencies
+      run: dotnet restore  # 还原项目的依赖项
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      # 编译项目，生成 Release 版本，--no-restore 参数表示在 build 时不执行还原操作
+
+    - name: Publish
+      run: dotnet publish --configuration Release --no-restore --no-build --output ./published
+      # 发布项目， 输出文件夹设置为 ./published
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Published
+        path: ./published/
+      # 将编译结果上传为工作流的 artifacts
