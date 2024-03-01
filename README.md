@@ -1,3 +1,7 @@
+这是一个Fork，目前仅供代码研究目的。
+
+----
+
 # XIU2/UACWhitelistTool
 
 [![Release Version](https://img.shields.io/github/v/release/XIU2/UACWhitelistTool.svg?style=flat-square&label=Release&color=1784ff&logo=github)](https://github.com/XIU2/UACWhitelistTool/releases/latest)
