@@ -233,6 +233,7 @@ namespace UAC白名单小工具
             {
                 TextBox_程序名称.Text = "noUAC." + TextBox_程序名称.Text;
             }
+            string FolderName = "noUAC\\"
             string TempFileName = Path.GetDirectoryName(Application.ExecutablePath) + @"\" + TextBox_程序名称.Text + ".xml";
             string XML_Text = Resources.XML_前 + Environment.NewLine + Resources.XML_程序位置_前 + TextBox_程序位置.Text + Resources.XML_程序位置_后;
             if (TextBox_启动参数.Text != "")
@@ -249,24 +250,24 @@ namespace UAC白名单小工具
             {
                 FileName = "schtasks.exe",
                 WindowStyle = ProcessWindowStyle.Hidden,
-                Arguments = "/create " + "/tn " + '"' + TextBox_程序名称.Text + '"' + " /xml " + '"' + @TempFileName + '"'
+                Arguments = "/create " + "/tn " + '"' + FolderName + TextBox_程序名称.Text + '"' + " /xml " + '"' + @TempFileName + '"'
             };
             //Debug.Print("/create " + "/tn " + '"' + TextBox_程序名称.Text + '"' + " /xml " + '"' + @TempFileName + '"');
             //Schtasks.Verb = "runas";
             Process.Start(Schtasks);
-            Create_Shortcut();
+            Create_Shortcut(FolderName);
             System.Threading.Thread.Sleep(200);
             System.IO.File.Delete(Path.GetDirectoryName(Application.ExecutablePath) + @"\" + TextBox_程序名称.Text + ".xml");
             MessageBox.Show("UAC白名单添加成功！" + Environment.NewLine + Environment.NewLine + "快捷方式位于桌面：" + Environment.NewLine + System.Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory) + @"\" + TextBox_程序名称.Text + ".lnk" + Environment.NewLine + "注意：只有通过该快捷方式运行才不会提示 UAC，快捷方式可复制、移动、重命名。", "信息：",MessageBoxButtons.OK);
         }
         // 创建快捷方式
-        public void Create_Shortcut()
+        public void Create_Shortcut(string FolderName)
         {
             WshShell shell = new WshShell();
             IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(System.Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory) + @"\" + TextBox_程序名称.Text + ".lnk");
             //Debug.Print(Path.GetDirectoryName(Application.ExecutablePath) + @"\" + TextBox_程序名称.Text + ".lnk");
             shortcut.TargetPath = "schtasks.exe";
-            shortcut.Arguments = "/run " + "/tn " + '"' + TextBox_程序名称.Text + '"';
+            shortcut.Arguments = "/run " + "/tn " + '"' + FolderName + TextBox_程序名称.Text + '"';
             shortcut.IconLocation = TextBox_程序位置.Text + ", 0";
             shortcut.WindowStyle = 7;
             shortcut.Save();
