@@ -1,0 +1,26 @@
+name: .NET Framework Build
+
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Build
+      run: msbuild "UAC白名单小工具.sln" /p:Configuration=Release
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: artifacts
+        path: ./Program/UAC白名单小工具/Release/*  # 直接从项目根目录开始的路径
