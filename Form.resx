@@ -133,7 +133,7 @@
 
 勾选 [添加软件到右键菜单] 后，可直接右键 .exe / .lnk 文件添加到 UAC 白名单。
 
-注意：为了方便寻找和删除，添加白名单时 [程序名称] 前会添加 [noUAC.] 标识。</value>
+注意：添加的计划任务会保存到任务计划程序的 [noUAC] 文件夹中。</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
